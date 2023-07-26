@@ -23,7 +23,7 @@ function atualiza(acesso,id){
         .catch(error=>(reject(error)));
     })
 }
-function exclue(id){
+function excluir(id){
     return new Promise((resolve,reject)=>{
         return api.delete(`/api/acessos/${id}`)
         .then(response=>resolve(response))
@@ -34,5 +34,5 @@ export default{
     lista,
     grava,
     atualiza,
-    exclue
+    excluir
 }

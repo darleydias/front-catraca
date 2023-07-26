@@ -19,6 +19,7 @@
               <th>Data-hora</th>
               <th>Nome</th>
               <th>Catraca</th>
+              <th></th>
             </tr>
           </thead>
             <tbody>
@@ -26,6 +27,7 @@
                 <td>{{ item.acesso_DH | data}}</td>
                 <td>{{ item.nomeCompleto}}</td>
                 <td>{{ item.local_nome}}</td>
+                <td><i class="fa-regular fa-trash-can icone-tabela"></i><i class="fa-regular fa-pen-to-square icone-tabela"></i></td>
               </tr>
             </tbody>
           
@@ -40,6 +42,7 @@ import Button from '@/components/button/button.vue'
 import acessoService from '../services/acesso'
 import Acesso from '../models/Acesso'
 import convertData from '../util/conversor-data'
+
 export default {
   name: 'AcessoView',
   components:{
@@ -79,5 +82,9 @@ export default {
   margin-left: 60px;
   margin-right: 60px;
 }
-
+.icone-tabela{
+  margin: 8px;
+  cursor: pointer;
+  color: var(--cor-primaria);
+}
 </style>
