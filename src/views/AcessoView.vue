@@ -8,7 +8,7 @@
     </div>
     <div class="row">
       <div class="col-sm-2">
-        <Button label="Gravar"></Button>
+        <Button :callback="adicionarAcessos" label="Gravar"></Button>
       </div>
     </div>
     <div class="row">
@@ -27,7 +27,7 @@
                 <td>{{ item.acesso_DH | data}}</td>
                 <td>{{ item.nomeCompleto}}</td>
                 <td>{{ item.local_nome}}</td>
-                <td><i class="fa-regular fa-trash-can icone-tabela"></i><i class="fa-regular fa-pen-to-square icone-tabela"></i></td>
+                <td><i @click="excluirAcessos" class="fa-regular fa-trash-can icone-tabela"></i></td>
               </tr>
             </tbody>
           
@@ -68,7 +68,14 @@ export default {
       .catch(error=>{
         console.log(error);
       })
+    },
+    adicionarAcessos(){
+      this.$router.push({name:"EntradaSaida"});
+    },
+    excluirAcessos(){
+      this.$router.push({name:"EntradaSaida"});
     }
+    
   },  
   mounted(){
     this.obterAcessos();
