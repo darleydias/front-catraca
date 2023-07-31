@@ -3,7 +3,7 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="box-foto">
-            <v-img :src="require('@/assets/foto.png')" width="390" height="480" ></v-img>
+            <img :src="require('@/assets/foto.png')" width="390" height="480" />
           </div>
         </div>
         <div class="col-sm-12">
@@ -26,29 +26,23 @@
   </script>
 
 <style>
-.display{
-  margin-top: 1%;
-  margin-right: 20px;
-  padding-left: 1%;
-  float:right;
-}
 .box-foto{
     width:400px;
     height: 500px;
-    border:1px solid #524d4d;
     margin-top:70px;
     padding-right: 20px;
     margin-right: 20px;
-    float:right;
-
+    padding-left: 20px;
+    margin-left: 20px;
 }
 .box-texto{
   padding-top: 20px;
-  margin-block-end: 0;
   text-align:justify;
   color:black;
   font-size: 28;
-  float:right;
+  width:400px;
+  max-width:500px;
+  margin-left:40px;
 }
 </style>
 

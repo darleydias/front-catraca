@@ -6,9 +6,6 @@
         <div class="col-sm-6">
           <router-view class="main"/>
         </div>
-        <div class="col-sm-6">
-          <DisplayView class="display"/>
-        </div>
       </div>
     </div>
   <section>
@@ -25,12 +22,12 @@
 <script>
 import Menu from '@/views/menu/MenuView.vue';
 import MenuLateral from '@/views/menu/MenuLateralView.vue';
-import DisplayView from '@/components/DisplayView.vue';
+
 export default{
   components:{
     Menu,
     MenuLateral,
-    DisplayView
+    
   }
 }
 </script>
@@ -44,14 +41,6 @@ export default{
   margin-right: 0px;
   padding-right: 0px;
   overflow:inherit;
-}
-.display{
-  margin-top: 0px;
-  padding: 0px;
-  margin-right: 20px;
-  padding-right: 20px;
-  margin-left: 0px;
-  float:none;
 }
 
 

@@ -1,7 +1,8 @@
 import AcessoView from '@/views/AcessoView';
+import LocalView from '@/views/LocalView';
 import HomeView from '@/views/HomeView';
 import LoginView from '@/views/LoginView';
-import EntradaSaidaView from '@/views/EntradaSaidaView';
+import Local from '@/views/Local';
 
 const routes = [
     {
@@ -10,11 +11,18 @@ const routes = [
       component: HomeView
     },
     {
-      path: '/entrada-saida',
-      name: 'EntradaSaida',
-      title: 'Entrar ou sair',
+      path: '/local',
+      name: 'Local',
+      title: 'Local onde ocorre o acesso',
       meta: {requiredAuth:false},
-      component: EntradaSaidaView
+      component: LocalView
+    },
+    {
+      path: '/local/novo',
+      name: 'LocalNovo',
+      title: 'Novo Local',
+      meta: {requiredAuth:false},
+      component: Local
     },
     {
       path: '/login',
